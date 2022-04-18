@@ -1,7 +1,6 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Header from './components/Header/Header';
 import Loyaut from './components/Loyaut/Loyaut';
 import CrewPage from './pages/CrewPage/CrewPage';
 import DestinationPage from './pages/Destination/DestinationPage';

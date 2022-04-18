@@ -67,3 +67,28 @@ body{
 	max-width: 1440px;
 	margin: 0 auto;
 }
+
+.content{
+	max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 12%;
+
+	.title_row {
+		display: flex;
+		align-items: center;
+		.num{
+			margin-right: 20px;
+			font-family: var(--fBarlow);
+			color: #fff;
+			opacity: 0.25;
+			font-size: var(--fzH5);
+		}
+		.title{
+			font-family: var(--fBarlow);
+			font-size: var(--fzH5);
+			text-transform: uppercase;
+			color: #fff;
+			letter-spacing: 4.725px;
+		}
+	}
+}
