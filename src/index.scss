@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 /*Обнуление*/
 *{
 	padding: 0;
@@ -38,7 +38,32 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
+:root {
+	--fBarlow: 'Barlow Condensed', sans-serif;
+	--fBellefair : 'Bellefair', serif;
+	--colorBlack : #0B0D17;
+	--colorSer : #D0D6F9;
+	--colorWite : #FFFFFF;
+
+	--fzH1 : 150px;
+	--fzH2 : 100px;
+	--fzH3 : 56px;
+	--fzH4 : 32px;
+	--fzH5 : 28px;
+
+	--fzsubHBelifair : 28px;
+	--fzsubHBarlow : 14px;
+
+	--fztext : 16px;
+
+}
+
 body{
 	background-color: rgb(46, 43, 43);
 	color: antiquewhite;
+}
+
+.conteiner{
+	max-width: 1440px;
+	margin: 0 auto;
 }
