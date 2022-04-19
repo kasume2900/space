@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import s from './DestinationPage.module.scss'
-
-const DestinationPage = () => {
-
-  const [state, setState] = useState(null)
-
-  useEffect(() => {
-    
-  },[])
-
+import f from '../../assets/destination/image-moon.png'
+const DestinationPage = ({data}) => {
+  console.log(data[0].images.png);
   return (
     <div className='content'>
       <div className='title_row'>
@@ -17,10 +11,10 @@ const DestinationPage = () => {
       </div>
       <div className="body_wrapper">
         <div className="image">
-          <img src="" alt="image" />
+          <img src={f} alt="image" />
         </div>
         <div className="body">
-
+          
         </div>
       </div>
     </div>
