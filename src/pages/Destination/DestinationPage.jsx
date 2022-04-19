@@ -11,7 +11,7 @@ const DestinationPage = ({data}) => {
       </div>
       <div className="body_wrapper">
         <div className="image">
-          <img src={f} alt="image" />
+          <img src={data[0].images.png} alt="image" />
         </div>
         <div className="body">
           

@@ -6,16 +6,19 @@ import CrewPage from './pages/CrewPage/CrewPage';
 import DestinationPage from './pages/Destination/DestinationPage';
 import HomePage from './pages/HamePage/HomePage';
 import TechnologyPage from './pages/TechnologyPage/TechnologyPage';
-import dataJS from './data.json'
 import { useEffect, useState } from 'react';
 function App() {
   
   const [data,setData] = useState('')
-
+  fetch('https://my-json-server.typicode.com/kasume2900/space/db')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    setData(data)
+  });
   useEffect(() => {
-    const res = JSON.stringify(dataJS)
-    const dataJson = JSON.parse(res)
-    setData(dataJson)
+    
   },[])
   return (
     <>
