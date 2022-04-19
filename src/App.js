@@ -7,27 +7,22 @@ import DestinationPage from './pages/Destination/DestinationPage';
 import HomePage from './pages/HamePage/HomePage';
 import TechnologyPage from './pages/TechnologyPage/TechnologyPage';
 import { useEffect, useState } from 'react';
+import data from './config';
 function App() {
   
-  const [data,setData] = useState('')
-  fetch('https://my-json-server.typicode.com/kasume2900/space/db')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    setData(data)
-  });
+  const [state,setState] = useState('')
   useEffect(() => {
-    
+    setState(data)
   },[])
+  
   return (
     <>
       <Routes>
         <Route path='/' element={<Loyaut />}>
           <Route index element={<HomePage />} />
-          <Route path='destination' element={<DestinationPage data={data.destinations} />} />
-          <Route path='crew' element={<CrewPage data={data.crew} />} />
-          <Route path='technology' element={<TechnologyPage data={data.technology} />} />
+          <Route path='destination' element={<DestinationPage state={state.destinations}  />} />
+          <Route path='crew' element={<CrewPage  />} />
+          <Route path='technology' element={<TechnologyPage  />} />
         </Route>
       </Routes>
     </>

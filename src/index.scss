@@ -68,10 +68,20 @@ body{
 	margin: 0 auto;
 }
 
-.content{
+
+.wrapperDest{
+	width: 100%;
+  height: 100vh;
+  background-image: url('./assets/destination/background-destination-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contentDest{
 	max-width: 1400px;
   margin: 0 auto;
   padding-top: 12%;
+	
 
 	.title_row {
 		display: flex;
@@ -91,4 +101,89 @@ body{
 			letter-spacing: 4.725px;
 		}
 	}
+
+	.body_wrapper{
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.body_link{
+			display: flex;
+			margin-bottom: 40px;
+			.link{
+				margin-right: 20px;
+				text-transform: uppercase;
+				color: #fff;
+				letter-spacing: 2.7px;
+				font-family: var(--fBarlow);
+				font-size: var(--fztext);
+			}
+		}
+
+		.name{
+			color: #fff;
+			font-family: var(--fBellefair);
+			font-size: var(--fzH2);
+			margin-bottom: 30px;
+		}
+		.text{
+			color: var(--colorSer);
+			font-family: var(--fBarlow);
+			font-size: 18px;
+			line-height: 32px;
+			&::after {
+				display: block;
+				content: '';
+				width: 444px;
+				height: 1px;
+				background: #383B4B;
+				margin: 40px 0 20px 0;
+			}
+		}
+
+		.info{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.colum{
+				.distance{
+					font-family: var(--fBarlow);
+					line-height: 17px;
+					letter-spacing: 2.3625px;
+					text-transform: uppercase;
+					color: var(--colorSer);
+					margin-bottom: 15px;
+				}
+				.km{
+					text-transform: uppercase;
+					color: #fff;
+					font-family: var(--fBellefair);
+					font-size: var(--fzH5);
+					line-height: 32px;
+				}
+				.time{
+					font-family: var(--fBarlow);
+					line-height: 17px;
+					letter-spacing: 2.3625px;
+					text-transform: uppercase;
+					color: var(--colorSer);
+					margin-bottom: 15px;
+				}
+				.days{
+					text-transform: uppercase;
+					color: #fff;
+					font-family: var(--fBellefair);
+					font-size: var(--fzH5);
+					line-height: 32px;
+				}
+			}
+		}
+	}
+
 }
+
+.body{
+	max-width: 444px;
+}
+
