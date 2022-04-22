@@ -22,7 +22,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='destination' element={<DestinationPage state={state.destinations}  />} />
           <Route path='crew' element={<CrewPage state={state.crew}  />} />
-          <Route path='technology' element={<TechnologyPage  />} />
+          <Route path='technology' element={<TechnologyPage state={state.technology}  />} />
         </Route>
       </Routes>
     </>
