@@ -1,37 +1,47 @@
 import React, { useEffect, useState } from 'react'
 import { findImage } from '../../components/Image/Image'
+import s from './DestinationPage.module.scss'
 
 
 const DestinationPage = ({ state }) => {
-  const img = findImage(state[0].name)
+  
+  const [index,setIndex] = useState(0)
+  const img = findImage(state[index].name)
+  const getPlanetInfo = (e) => {
+    const arr = state.map(el => el.name.toLowerCase())
+    const ind = arr.indexOf(e.target.innerText.toLowerCase())
+    setIndex(ind)
+  }
+
+
+  useEffect(() => {
+    
+  },[])
   return (
-    <div className='wrapperDest'>
-      <div className='contentDest'>
-        <div className='title_row'>
-          <div className='num'>01</div>
-          <div className="title">Pick your destination</div>
+    <div className={s.wrapperDest}>
+      <div className={s.contentDest}>
+        <div className={s.titleRow}>
+          <div className={s.num}>01</div>
+          <div className={s.title}>Pick your destination</div>
         </div>
-        <div className="body_wrapper">
-          <div className="image">
+        <div className={s.bodyWrapper}>
+          <div className={s.image}>
             {img}
           </div>
-          <div className="body">
-            <div className="body_link">
-              <div className="link">moon</div>
-              <div className="link">mars</div>
-              <div className="link">europa</div>
-              <div className="link">titan</div>
+          <div className={s.body}>
+            <div className={s.bodyLink}>
+              {state.map(el => <div onClick={getPlanetInfo} key={el.name} className={s.link}>{el.name}</div>)}
             </div>
-            <div className='name'>MOON</div>
-            <p className='text'>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
-            <div className='info'>
-              <div className="colum">
-                <div className="distance">AVG. DISTANCE</div>
-                <div className="km">384,400 km</div>
+            <div className={s.name}>{state[index].name}</div>
+            <p className={s.text}>{state[index].description}</p>
+            <div className={s.info}>
+              <div className={s.colum}>
+                <div className={s.distance}>AVG. DISTANCE</div>
+                <div className={s.km}>{state[index].distance}</div>
               </div>
-              <div className="colum">
-                <div className="time">Est. travel time</div>
-                <div className="days">3 days</div>
+              <div className={s.colum}>
+                <div className={s.time}>Est. travel time</div>
+                <div className={s.days}>{state[index].travel}</div>
               </div>
             </div>
           </div>
